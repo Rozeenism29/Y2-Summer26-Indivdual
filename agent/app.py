@@ -28,6 +28,7 @@ def run_chat():
         )
 
         reply = response.content[0].text
+        print(response)
         print(f'Claude: {reply}')
         history.append({'role': 'assistant', 'content': reply})
 
@@ -42,3 +43,9 @@ run_chat()
 #d) if you remove the break the code continue working if you press exit it doesnt 
 #3)the api code didnt work at the beggining and i solve it by reciving another api code and capitalaise the vairble 
 
+
+#lab2 (not finished)
+#step1 the input token is how much it tkes to process your question and the output is how much it takes for the code to print the reply 
+#step2 
+#it crached because i wrote a messege more than 50 letters 
+#
