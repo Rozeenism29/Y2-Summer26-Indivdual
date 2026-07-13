@@ -35,4 +35,10 @@ run_chat()
 
 
 # reflectio  lab 1
-#1)the internet history it holds every single person that used it and it goes over his nfo and details , count how much you have to pay each month and track the payment details
+#1)the internet history it holds every single person that used it and it goes over his nfo and details , count how much you have to pay each month and track the payment details so every time it want to use this info it go back to the history 
+#a)history.append({'role': 'assistant', 'content': reply}) It still remembers what I asked because the user messages are saved but it forgets what it replied before
+#b) load_dotenv()  when using it the code doesent work because API key isn't loaded from the .env file without the key the API call doesnt work
+#c)the chatbot still runs normally but its kinda change the personality so it less creative
+#d) if you remove the break the code continue working if you press exit it doesnt 
+#3)the api code didnt work at the beggining and i solve it by reciving another api code and capitalaise the vairble 
+
