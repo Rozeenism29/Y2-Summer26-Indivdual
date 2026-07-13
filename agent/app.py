@@ -32,3 +32,7 @@ def run_chat():
         history.append({'role': 'assistant', 'content': reply})
 
 run_chat()
+
+
+# reflectio  lab 1
+#1)the internet history it holds every single person that used it and it goes over his nfo and details , count how much you have to pay each month and track the payment details
