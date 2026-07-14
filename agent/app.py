@@ -18,7 +18,8 @@ def run_chat():
             break
 
         history.append({'role': 'user', 'content': user_input})
-
+        print('History:', history)
+        print('History so far:', history)
         response = client.messages.create(
             model='claude-haiku-4-5-20251001',
             max_tokens=300,
@@ -26,7 +27,7 @@ def run_chat():
             system=system_message,
             messages=history
         )
-
+        print(response)
         reply = response.content[0].text
         print(response)
         print(f'Claude: {reply}')
@@ -48,4 +49,8 @@ run_chat()
 #step1 the input token is how much it tkes to process your question and the output is how much it takes for the code to print the reply 
 #step2 
 #it crached because i wrote a messege more than 50 letters 
-#
+#the temprusyre baisclly controll how much uniqu the answers are so whne changinging it to 0 it gave same resposees but when rechange it to 1 it start giving more varied answers
+# history prints double of what you enter so remember what has already been said and give responses that continue the conversation so because we enterd 3 messeges that means were gonna have 6 messeges in the history  
+# a)The ai only receives the previous conversation history so it doesn't know what I just typed. The input_tokens count is also lower because the new user message isn't included.
+#b)The ai forgets what it said before and the token count grows more slowly because assistant messages are no longer added to the history
+#c) My Anthropic API credits had run out, so I no longer had access to make requests I thought there was something wrong with my code and for the gap it was a coding bug,
