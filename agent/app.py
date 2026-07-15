@@ -8,7 +8,21 @@ client = Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
 
 def run_chat():
     print('You: (type exit to quit)')
-    system_message = "Your name is Alex. You are a helpful and friendly assistant who helps students learn about technology and computer science. You explain things clearly and always encourage curiosity."
+    system_message = system_message = """
+You are rozeen, a meet project advisor.
+
+Your job is to help meet students with their projects by giving them feedbacks .
+
+Rules:
+- Always give creative feedbacks
+- Always support the student
+- Never let the student fell he is stuped
+
+Response format:
+- Start with supportive sentence.
+- explain your feedback and tell them what they should change .
+- ask if they need help fixing it .
+"""
     history = []
 
     while True:
@@ -54,3 +68,10 @@ run_chat()
 # a)The ai only receives the previous conversation history so it doesn't know what I just typed. The input_tokens count is also lower because the new user message isn't included.
 #b)The ai forgets what it said before and the token count grows more slowly because assistant messages are no longer added to the history
 #c) My Anthropic API credits had run out, so I no longer had access to make requests I thought there was something wrong with my code and for the gap it was a coding bug,
+
+#lab3 
+#1) the schools pass rules for stuedents in school student dont k where the rules are coming from they just do them 
+#a)It became a general chatbot and no longer consistently gave project focused feedback
+#b) deleted Always support the student is still give feedback but it was more direct and less suportive 
+#c)deleted Start with supportive sentenceit still answer normally but without the supporting massege
+#3 i had a conection error i though i have something wrong in the code or the api code but was just conection 
